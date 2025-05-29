@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Now - NIKE</title>
+   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+
+    /* Order Section */
+    .order-section {
+      padding: 40px 20px;
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .order-section h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 28px;
+    }
+
+    .order-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .order-form label {
+      font-weight: 500;
+    }
+
+    .order-form input,
+    .order-form textarea,
+    .order-form select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    .order-form button {
+      padding: 12px;
+      background-color: black;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .order-form button:hover {
+      background-color: #ff3c00;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .nav {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .search {
+        width: 100%;
+      }
+
+      .search input {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">NIKE</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="men.html">Men</a>
+      <a href="women.html">Women</a>
+      <a href="order.html" class="active">Order Now</a>
+      <a href="aboutus.html" class="active">About Nike</a>
+    </nav>
+    <div class="search">
+      <input type="text" placeholder="Search" />
+    </div>
+  </header>
+
+  <!-- Order Form -->
+  <section class="order-section">
+    <h2>Place Your Order</h2>
+    <form class="order-form" action="#" method="post">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="address">Shipping Address:</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+
+      <label for="product">Select Product:</label>
+      <select id="product" name="product" required>
+        <option value="">-- Select --</option>
+        <option value="Air Max Alpha">Air Max Alpha</option>
+        <option value="Pro Flex Shorts">Pro Flex Shorts</option>
+        <option value="Therma-FIT Jacket">Therma-FIT Jacket</option>
+        <option value="React Infinity Flyknit">React Infinity Flyknit</option>
+      </select>
+
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" min="1" value="1" required />
+
+      <button type="submit">Submit Order</button>
+    </form>
+
+    <div class="confirmation" id="confirmationMessage">
+      ✅ Thank you! Your order has been received.
+    </div>
+  </section>
+ <script>
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevent form from submitting
+      document.getElementById('confirmationMessage').style.display = 'block';
+      this.reset(); // Optional: Clear form
+    });
+  </script>
+</body>
+</html>

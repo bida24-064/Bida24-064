@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - NIKE</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    /* Video Background */
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    /* About Content */
+    .about-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 100px auto;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .about-content h2 {
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 600px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .nav {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .search input {
+        width: 100%;
+      }
+
+      .about-content {
+        margin: 80px 20px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Video Background -->
+  <video class="video-bg" autoplay muted loop>
+    <source src="video/tubidymp3.vip - Nike - Running Isn t Just Running Spec Ad (720p).mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">NIKE</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="men.html">Men</a>
+      <a href="women.html">Women</a>
+      <a href="order.html">Order Now</a>
+      <a href="aboutus.html" class="active">About Nike</a>
+    </nav>
+    <div class="search">
+      <input type="text" placeholder="Search">
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="about-content">
+    <h2>About NIKE</h2>
+    <p>Since its founding in 1964, NIKE has transformed from a small footwear distributor into one of the most iconic and innovative sportswear brands in the world. Known for its bold "Just Do It" slogan, cutting-edge designs, and global athletic partnerships, NIKE empowers athletes of every level to reach their full potential.</p>
+
+    <p>Our mission is simple: to bring inspiration and innovation to every athlete in the world. We define "athlete" broadly—if you have a body, you’re an athlete. With that mindset, we constantly push boundaries in sports apparel, footwear technology, and sustainable innovation.</p>
+
+    <p>At the heart of NIKE is a commitment to excellence—not just in products, but also in the communities we serve. From global campaigns to grassroots initiatives, we strive to make a positive impact in everything we do.</p>
+  </section>
+
+</body>
+</html>
